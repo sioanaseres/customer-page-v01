@@ -131,7 +131,7 @@ clip: rect(0,0,0,0); white-space: nowrap; border-width: 0}
 								.BtnSorting svg{fill: var(--color-dark-blue);}
 	.FilterButton{display: flex; flex-direction: column; align-items: center; justify-content: flex-start;}
 		.FilterButton span{display: block;  color: var(--color-medium-blue); font-weight: 700;}
-		.Filter{width: 50rem;
+		.Filter{
 			@media (min-width: 850px){margin-left: 15%;}}
 
 			.FilterContainer{ }
