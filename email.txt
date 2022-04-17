@@ -1,0 +1,8 @@
+Buna,
+
+am aplicat in urma cu 2 luni pentru pozitia de junior-middle front end developer. La interviu am ramas cu feeling-ul ca m-am descurcat ok, insa la test nu am reusit sa fac pagina conform asteptarilor.
+
+Intre timp am descoperit canalul tau de youtube, am aprofundat SCSS, webp images, structured data, in mare m-am focusat pe ce am gresit anterior.
+Asa ca, afland din video=ul cu mock-up interview ca mai este cautata o persoana pentru frontend la Pentest Tools, am refacut pagina de la test intr-o alta varianta.
+
+Totodata, mi-am refacut pagina de portofoliu si proiectele aferente.
