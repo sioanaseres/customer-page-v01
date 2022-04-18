@@ -154,9 +154,15 @@
                                     <option value="alphabetical">Alphabetical</option>
                                 </select>
                             </label>
-                            <button class="BtnSorting"><span>Sort</span>
-                                <svg width="26px" height="26px" viewBox="0 0 256 256" id="Flat" xmlns="http://www.w3.org/2000/svg">
+                            <button class="BtnSorting" id="ascending"><span>Sort</span>
+                                <svg width="26px" height="26px" viewBox="0 0 256 256"  xmlns="http://www.w3.org/2000/svg">
                                     <path d="M232.48486,96.47107a11.99915,11.99915,0,0,1-16.97021.002L196,76.9613v67.03223a12,12,0,0,1-24,0V76.964L152.48535,96.47888a12.0001,12.0001,0,0,1-16.9707-16.9707l40-40c.019-.019.04-.03467.05908-.05347.26221-.25854.53418-.50634.81885-.74.14306-.11767.29443-.22021.4414-.33008.16651-.12451.32911-.25341.50245-.36914.17187-.11523.35058-.21533.52734-.32055.15967-.09546.31543-.19556.47949-.28345.1792-.0957.36328-.17676.54541-.26294.17285-.0813.34229-.16748.51953-.241.17676-.07324.35742-.13208.53711-.19653.18994-.06811.377-.14087.57129-.2.17969-.0542.36182-.09375.543-.13965.19824-.0498.39355-.10547.5957-.14526.209-.04151.42041-.06616.63086-.09644.17676-.02539.35059-.05884.53028-.07641.39355-.03882.78808-.05982,1.18359-.05982h0l.00928.00049c.39209.00024.78418.02075,1.1748.05933.17578.01733.34571.05.519.075.21436.03051.4292.05566.64209.0979.19678.03906.3877.09326.58106.14184.18652.04663.37451.08789.55908.14356.188.05713.36963.12793.55371.19385.18555.06616.37207.12744.55518.20312.17041.0708.334.15381.50049.23218.189.08862.37939.17285.56445.27173.15625.084.30469.17968.457.27.18408.10962.37012.21411.54981.33422.16455.11011.31884.23316.47753.35083.15528.11548.314.22388.46485.34766.26416.217.51562.44873.76025.687.0376.03662.07862.06763.11572.105l39.999,39.99317A11.99974,11.99974,0,0,1,232.48486,96.47107ZM48,139.99353h71.999a12,12,0,0,0,0-24H48a12,12,0,0,0,0,24Zm0-64h55.999a12,12,0,0,0,0-24H48a12,12,0,0,0,0,24Zm135.999,104H48a12,12,0,0,0,0,24H183.999a12,12,0,0,0,0-24Z"/>
+                                  </svg>
+                                  
+                            </button>
+                              <button class="BtnSorting" id="descending"><span>Sort</span>
+                                <svg width="26px" height="26px" viewBox="0 0 256 256" id="Flat" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M229.65527,173.65759l-39.999,39.99317a8,8,0,0,1-11.313,0l-40-40A8.00037,8.00037,0,0,1,144,159.99353h.001l31.999.00293V111.99353a8,8,0,0,1,16,0v48.00391l32,.00293a7.99976,7.99976,0,0,1,5.65527,13.65722ZM119.999,119.99353H48a8,8,0,0,0,0,16h71.999a8,8,0,1,0,0-16Zm-71.999-48H183.999a8,8,0,0,0,0-16H48a8,8,0,1,0,0,16Zm56,112H48a8,8,0,0,0,0,16h56a8,8,0,0,0,0-16Z"/>
                                   </svg>
                                   
                             </button>
@@ -171,9 +177,9 @@
             </div>
                 <div class="Filter">
                     <form  id="FilterForm" class="Form" action="#" method="post">
-                        <fieldset class="Fieldset">
+                        <fieldset class="FieldsetFilter">
                             <div class="FilterContainer">
-                            <legend class="Legend">Filter by:</legend>
+                                <legend class="Legend">Filter by:</legend>
                              
                                 <div class="FilterOptions">
                                 <label for="Filter" class="LabelFilter">
@@ -213,64 +219,126 @@
             <div class="CustomersContainer">
                 <ol class="CustomersItems">
                     <li class="CustomersItem">
-                        <img src="./images/clients/accenture.svg" alt="Accenture is a Pentest-Tools customer" title="Accenture is a Pentest-Tools customer" class="CustomersImage" width="215" height="60">
+                        <img src="./images/clients/accenture.svg" alt="Accenture is a Pentest-Tools customer" title="Accenture is a Pentest-Tools customer" class="CustomersImage" width="215" height="60" data-name="Accenture" data-relevance="7">
                     </li>
                     <li class="CustomersItem">
-                        <img src="./images/clients/allianz.svg" alt="Allianz is a Pentest-Tools customer" class="CustomersImage" title="Allianz is a Pentest-Tools customer" width="215" height="60">
+                        <img src="./images/clients/allianz.svg" alt="Allianz is a Pentest-Tools customer" class="CustomersImage" title="Allianz is a Pentest-Tools customer" width="215" height="60" data-name="Allianz" data-relevance="7">
                     </li>
                     <li class="CustomersItem">
-                        <img src="./images/clients/deloitte.svg" alt="Deloitte is a Pentest-Tools customer" class="CustomersImage" title="Deloitte is a Pentest-Tools customer" width="215" height="60">
+                        <img src="./images/clients/deloitte.svg" alt="Deloitte is a Pentest-Tools customer" class="CustomersImage" title="Deloitte is a Pentest-Tools customer" width="215" height="60" data-name="Deloitte" data-relevance="7">
                     </li>
                     <li class="CustomersItem">
-                        <img src="./images/clients/orange.svg" alt="Orange is a Pentest-Tools customer" class="CustomersImage" title="Orange is a Pentest-Tools customer" width="215" height="60">
+                        <img src="./images/clients/orange.svg" alt="Orange is a Pentest-Tools customer" class="CustomersImage" title="Orange is a Pentest-Tools customer" width="215" height="60" data-name="Orange" data-relevance="9">
                     </li>
                     <li class="CustomersItem">
-                        <img src="./images/clients/vodafone.svg" alt="Vodafone is a Pentest-Tools customer" class="CustomersImage" title="Vodafone is a Pentest-Tools customer" width="215" height="60">
+                        <img src="./images/clients/vodafone.svg" alt="Vodafone is a Pentest-Tools customer" class="CustomersImage" title="Vodafone is a Pentest-Tools customer" width="215" height="60" data-name="Vodafone" data-relevance="9">
                     </li>
                     <li class="CustomersItem">
-                        <img src="./images/clients/yale.svg" alt="Yale is a Pentest-Tools customer" class="CustomersImage" title="Yale is a Pentest-Tools customer" width="215" height="60">
+                        <img src="./images/clients/yale.svg" alt="Yale is a Pentest-Tools customer" class="CustomersImage" title="Yale is a Pentest-Tools customer" width="215" height="60" data-name="Yale" data-relevance="10">
                     </li>
                     <li class="CustomersItem">
-                        <img src="./images/clients/johnson.svg" alt="Johnson & Johnson is a Pentest-Tools customer" class="CustomersImage" title="Johnson & Johnson is a Pentest-Tools customer" width="215" height="60">
+                        <img src="./images/clients/johnson.svg" alt="Johnson & Johnson is a Pentest-Tools customer" class="CustomersImage" title="Johnson & Johnson is a Pentest-Tools customer" width="215" height="60" data-name="Johnson & Johnson" data-relevance="8">
                     </li>
                     <li class="CustomersItem">
-                        <img src="./images/clients/intel.svg" alt="Intel is a Pentest-Tools customer" class="CustomersImage" title="Intel is a Pentest-Tools customer" width="215" height="60">
+                        <img src="./images/clients/intel.svg" alt="Intel is a Pentest-Tools customer" class="CustomersImage" title="Intel is a Pentest-Tools customer" width="215" height="60" data-name="Intel" data-relevance="10">
                     </li>
                     <li class="CustomersItem">
-                        <img src="./images/clients/cathay.svg" alt="Cathay Bank is a Pentest-Tools customer" class="CustomersImage" title="Cathay Bank is a Pentest-Tools customer" width="215" height="60">
+                        <img src="./images/clients/cathay.svg" alt="Cathay Bank is a Pentest-Tools customer" class="CustomersImage" title="Cathay Bank is a Pentest-Tools customer" width="215" height="60" data-name="Cathay United Bank" data-relevance="1">
                     </li>
                     <li class="CustomersItem">
                         <img src="./images/clients/gov.svg" alt="U.S. Department of Commerce
-                        is a Pentest-Tools customer" title="U.S. Department of Commerce is a Pentest-Tools customer" class="CustomersImage" width="215" height="60">
+                        is a Pentest-Tools customer" title="U.S. Department of Commerce is a Pentest-Tools customer" class="CustomersImage" width="215" height="60" data-name="U.S. Department of Commerce" data-relevance="10">
                     </li>
                 </ol>
             </div>
         </section>
+        <section class="Reviews">
+            <div class="CustomersText">
+                <?xml version="1.0" encoding="utf-8"?>
+
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="200px" height="200px" 
+                     viewBox="0 0 32 32" style="enable-background:new 0 0 32 32;" xml:space="preserve">
+                <style type="text/css">
+                    .st0{fill:none;stroke:#002C50;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+                </style>
+                <path class="st0" d="M3,8v14c0,1.1,0.9,2,2,2h16.8l7.3,6v-6V8c0-1.1-0.9-2-2-2H5C3.9,6,3,6.9,3,8z"/>
+                <polygon class="st0" points="12,9.9 13.5,13.1 17,13.6 14.5,16 15.1,19.4 12,17.8 8.9,19.4 9.5,16 7,13.6 10.5,13.1 "/>
+                <line class="st0" x1="20" y1="13" x2="25" y2="13"/>
+                <line class="st0" x1="22" y1="17" x2="25" y2="17"/>
+                </svg>
+
+            <h2 class="CustomersTitle"><a href="https://pentest-tools.com/reviews">What our customers say</a> about
+                Pentest-Tools.com </h2>
+        
+            </div>
+            <div class="Review">
+                <div class="ReviewAuthorContainer">
+                    <div class="SvgSeparator">  
+                        <hr>
+                        <svg data-v-f4513176="" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 41 30" class="h-8 w-auto text-primary-accent-500"><path fill="currentColor" d="M40.55 7.456l-.051-.336-.053.012a8.98 8.98 0 00-2.4-4.414A9.18 9.18 0 0033.628.247a9.27 9.27 0 00-5.073.234 9.147 9.147 0 00-4.165 2.867 8.952 8.952 0 00-1.971 4.616 8.906 8.906 0 00.83 4.94 9.061 9.061 0 003.376 3.742 9.242 9.242 0 004.88 1.389c.453 0 .888-.068 1.321-.13-.14.464-.284.937-.516 1.362-.232.617-.594 1.152-.953 1.692-.301.583-.831.977-1.222 1.476-.408.485-.965.808-1.406 1.21-.433.422-1 .632-1.451.928-.472.267-.882.562-1.321.702l-1.096.445-.963.395.984 3.885 1.213-.289c.388-.096.862-.208 1.4-.342.551-.1 1.138-.375 1.793-.625.644-.287 1.394-.477 2.09-.936.698-.437 1.505-.802 2.216-1.387.69-.603 1.52-1.126 2.134-1.892.671-.717 1.334-1.47 1.848-2.328.595-.818 1-1.715 1.427-2.603a21.99 21.99 0 00.95-2.677c.482-1.768.698-3.447.781-4.884.07-1.439.029-2.635-.057-3.5a13.945 13.945 0 00-.128-1.08zm-22.357 0l-.05-.336-.054.012a8.98 8.98 0 00-2.4-4.414A9.18 9.18 0 0011.273.247a9.27 9.27 0 00-5.074.234 9.147 9.147 0 00-4.164 2.867A8.952 8.952 0 00.063 7.964a8.906 8.906 0 00.83 4.94 9.06 9.06 0 003.376 3.742 9.242 9.242 0 004.88 1.389c.453 0 .888-.068 1.32-.13-.14.464-.284.937-.515 1.362-.232.617-.594 1.152-.954 1.692-.3.583-.83.977-1.221 1.476-.409.485-.965.808-1.406 1.21-.433.422-1 .632-1.452.928-.471.267-.882.562-1.32.702l-1.096.445c-.612.246-.961.39-.961.39l.983 3.886 1.214-.289c.388-.096.861-.208 1.4-.342.55-.1 1.138-.375 1.793-.625.644-.287 1.394-.477 2.089-.936.699-.437 1.506-.802 2.217-1.387.69-.603 1.52-1.126 2.134-1.892.67-.717 1.333-1.47 1.848-2.328.595-.818 1-1.715 1.426-2.603a21.99 21.99 0 00.951-2.677 23.88 23.88 0 00.781-4.884c.07-1.438.028-2.635-.057-3.5-.03-.36-.074-.72-.13-1.077z"></path></svg>
+                    <hr>
+                </div>
+                    <div class="ReviewAuthorPerson">
+                        <h3 class="ReviewAuthor"> Ioan Constantin </h3>
+                        <p class="ReviewAuthorPosition">Cyber Security Expert, Orange | Industry: telecom
+                        </p>
+                    </div>
+                </div>
+               
+                <h4 class="ReviewTitle"><span>Likes it for:</span> ease of use, great reporting capabilities</h4>
+                <div class="ReviewTextContainer">
+                    <img src="./images/user-1.webp" alt="Cyber Security Expert review author picture" width="100" height="100" title="Cyber Security Expert review author picture" class="AuthorImage">
+               
+                    <p class="ReviewText"><em>“We teamed up with Pentest-Tools.com nearly 3 years ago and offered their
+                        great Web Vulnerability Assessment tools in our <a href="threatmap.ro" title="Orange Business Security Real Time Map" target="_blank">threatmap.ro</a> platform, offering free, one-click quick scans for our user
+                        base. <br><br>
+                        We absolutely loved the experience, so far :) and appreciate the great
+                        collaboration with their team and how easy it is to work with them in demanding
+                        projects such as Threatmap.</em> <a href="" class="ReadMore" title="Click here to read the full review">Read the full review &gt</a></p>
+                </div>
+                <div class="MoreDetails">
+                    <img src="./images/global.webp" alt="Orange Business Security Real Time Map " width="200" height="100" title="Orange Business Security Real Time Map" class="MoreDetailsImage">
+                    <p class="MoreDetailsText"><em>Having access to a well-documented API was key for the successful integration
+                        of Threatmap and Pentest-Tools.com and the girls and guys over there
+                        delivered a great API, were prompt in answering our feedback and supporting
+                        our needs for some over-the-top custom integration requirements. <br><br>
+                        We're pushing forward with new iterations of Threatmap, new use-cases and as we expand our user-base, Pentest-Tools.com remains one of the core tools we're using to push forward innovation, awareness and technology.”
+                        </p></em>
+                        <a href="" class="ReadLess" title="Click here to hide the read more section">Read less</a>
+                </div>
+            </div>
+            <button class="ButtonPrimary CTAMain"><a href="https://pentest-tools.com/reviews">Read all the reviews from our customers &raquo;</a></button>
+            <hr class="SecondSeparator">
+        </section>
       </main>
-   
-        <footer class="Footer" id="contact">
-            <div class="FooterContact">
-            <a href="#" class="Logo" title="Back to Homepage">
-           
-            </a>
-            <ul class="FooterItems">
-                <li class="FooterItem">
-                    <a href="#" class="FooterLink">Contact</a>
-                </li>
-                <li class="FooterItem">
-                    <a href="#" class="FooterLink">Projects</a>
-                </li>
-                <li class="FooterItem">
-                    <a href="#" class="FooterLink">Facebook</a>
-                </li>
+   <section class="Discover">
+    <h2 class="CustomersTitle">Discover our pentesting tools </h2>
+    <p class="DiscoverText">See which aspects of your work you can automate and simplify</p>
+    <button class="ButtonPrimary CTAMain"><a href="https://pentest-tools.com/alltools">See all the tools &raquo;</a></button>
+   </section>
+
+<footer class="Footer" >
+    <div class="FooterContact">
+        <ul class="FooterItems">
+            <li class="FooterItem">
+                    <a href="#" class="FooterLink">Tools</a>
+            </li>
+             <li class="FooterItem">
+                    <a href="#" class="FooterLink">Company</a>
+             </li>
+             <li class="FooterItem">
+                    <a href="#" class="FooterLink">Resources</a>
+            </li>
+            <li class="FooterItem">
+                    <a href="#" class="FooterLink">Help</a>
+             </li>
             </ul>
             
-        </div>
+    </div>
             <div class="FooterOther">
-                <p class="FooterEmail">info@designform.com</p>
-                <p class="FooterCopy">2022 DesignForm</p>
-            </div>
-        </footer>
+                <p class="FooterCopy">&copy; 2012-2022 Pentest-Tools.com</p>
+             </div>
+</footer>
   </div>
 </body>
 </html>
