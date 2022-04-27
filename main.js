@@ -119,6 +119,7 @@ const customers = {
 
   //displaying cards
 
+  const customersContainer = document.querySelector(".CustomersContainer")
   const cardContainer = document.querySelector(".CustomersItems");
 
   const displayCards = function(card, sort = false){
@@ -127,7 +128,7 @@ const customers = {
 		
 	   const html= `
 	   <li class="CustomersItem" itemscope itemtype="https://schema.org/Organization">
-	   <img itemprop="image" src=${element.image} alt="${element.name} is a Pentest-Tools customer" class="CustomersImage" title="${element.name} is a Pentest-Tools customer" width="215" height="60" data-name="${element.name}" data-relevance="${element.relevance}">
+	   <img itemprop="image" loading="lazy" src=${element.image} alt="${element.name} is a Pentest-Tools customer" class="CustomersImage" title="${element.name} is a Pentest-Tools customer" width="215" height="60" data-name="${element.name}" data-relevance="${element.relevance}">
    		</li>
 	   `
 
@@ -201,7 +202,7 @@ sortSelect.addEventListener("change", function (event) {
 		descending.style.display = "none";
 		ascending.style.display = "block";
 	})
- }
+ } 
 })
 
 
@@ -211,7 +212,7 @@ const filterByCountry = (country) => {
 
 	country = country.toLowerCase();
 	if (country === "All countries") return customers.data;
-  
+   if(country ) return customersContainer.innerHTML = "No customers for the selected country ";
 	const filterResult = customers.data.filter(el => {
 	  return el.country.toLowerCase().includes(country)
 	  })
@@ -234,7 +235,7 @@ const filterByIndustry = (industry) => {
 
 	industry = industry.toLowerCase();
 	if (industry === "All industries") return customers.data;
-  
+	if(industry ) return customersContainer.innerHTML = "No customers for the selected industry ";
 	const filterResult = customers.data.filter(el => {
 	  return el.industry.toLowerCase().includes(industry)
 	  })
