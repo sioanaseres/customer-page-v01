@@ -126,11 +126,11 @@ clip: rect(0,0,0,0); white-space: nowrap; border-width: 0}
 							.Select{border-top-left-radius: 0.5rem; border-bottom-left-radius: 0.5rem; background: rgba(191, 204, 222, 0.1); border: 1px solid var(--color-dark-grey); height: 2rem; border-right: none;  outline: none;
 							&:hover{border: 3px solid var(--color-primary-blue);} }
 							.Select option{font-family: 'Archivo', sans-serif;}
-							.BtnSorting{display: flex; border: 1px solid var(--color-dark-grey); ; height: 2rem; border-top-right-radius: 0.5rem; border-bottom-right-radius: 0.5rem; background: rgba(191, 204, 222, 0.1); margin-top: 1.5rem; 
+							.BtnSorting{display: flex; border: 1px solid var(--color-dark-grey); ; height: 2rem; border-top-right-radius: 0.5rem; border-bottom-right-radius: 0.5rem; background: rgba(191, 204, 222, 0.1); margin-top: 1.5rem;  width: 5rem; position: relative;
 								&:hover{border: 3px solid var(--color-primary-blue);}}
 								.BtnSorting span{font-family: 'Archivo', sans-serif; }
-								.BtnSorting svg{fill: var(--color-dark-blue);}
-								#descending{display: none;}
+								#ascending{fill: var(--color-dark-blue); position: absolute; top:0; right: 0.3rem;}
+								#descending{display: none; fill: var(--color-dark-blue); position: absolute; top:0; right: 0.3rem;}
 	.FilterButton{display: flex; flex-direction: column; align-items: center; justify-content: flex-start;}
 		.FilterButton span{display: block;  color: var(--color-medium-blue); font-weight: 700;}
 		.Filter{
