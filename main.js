@@ -126,8 +126,8 @@ const customers = {
 	card.forEach(element=>{
 		
 	   const html= `
-	   <li class="CustomersItem">
-	   <img src=${element.image} alt="${element.name} is a Pentest-Tools customer" class="CustomersImage" title="${element.name} is a Pentest-Tools customer" width="215" height="60" data-name="${element.name}" data-relevance="${element.relevance}">
+	   <li class="CustomersItem" itemscope itemtype="https://schema.org/Organization">
+	   <img itemprop="image" src=${element.image} alt="${element.name} is a Pentest-Tools customer" class="CustomersImage" title="${element.name} is a Pentest-Tools customer" width="215" height="60" data-name="${element.name}" data-relevance="${element.relevance}">
    		</li>
 	   `
 
@@ -135,7 +135,7 @@ const customers = {
 
   
 	})}
-	displayCards(customers.data, false);
+
 
   //sort
 
@@ -146,8 +146,10 @@ const customers = {
 const customersSortedAscRelevance = [...customers.data].sort((a,b) => a.relevance-b.relevance);
 const customersSortedDescRelevance = [...customers.data].sort((a,b) => b.relevance-a.relevance);
 
-const customersSortedAscAlphabetical = [...customers.data].sort((a,b) => a.name > b.name ? -1 : 1);
-const customersSortedDescAlphabetical = [...customers.data].sort((a,b) => a.name < b.name ? -1 : 1);
+const customersSortedAscAlphabetical = [...customers.data].sort((a,b) => a.name < b.name ? -1 : 1);
+const customersSortedDescAlphabetical = [...customers.data].sort((a,b) => a.name > b.name ? -1 : 1);
+
+displayCards(customersSortedAscRelevance, false);
 
 ascending.addEventListener("click", function(e){
 	e.preventDefault();
@@ -167,7 +169,6 @@ const sortSelect = document.querySelector(".Select");
 sortSelect.addEventListener("change", function (event) {
 	event.preventDefault();
 
-// if(event.target.value === "default") displayCards(customers.data, false);
 
   if(event.target.value === "relevance"){
 
@@ -221,7 +222,7 @@ const filterByCountry = (country) => {
   const selectCountry = document.querySelector("#actionFilterFirst");
 
 	selectCountry.addEventListener("change", function (event) {
- 
+
  	cardContainer.innerHTML = "";
 
   const results = filterByCountry(event.target.value);

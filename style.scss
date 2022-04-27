@@ -94,8 +94,8 @@ clip: rect(0,0,0,0); white-space: nowrap; border-width: 0}
 
 
 .MainContent{background: url("./images/vecteezy_abstract-white-fluid-wave-background_.webp") center/cover repeat ; }
-	.Heading{display:flex; flex-direction: column; align-items: center; justify-content: center; height: 85vh; background: var(--color-primary-light); margin-bottom: 5rem; position: relative; z-index: 2;
-		@media (min-width: 850px){height: 60vh;}}
+	.Heading{display:flex; flex-direction: column; align-items: center; justify-content: center; height: 50rem; background: var(--color-primary-light); margin-bottom: 5rem; position: relative; z-index: 2;
+		@media (min-width: 800px){height: 40rem;}}
 		.PageTitle{display: block; font-weight: 100; font-size: 3.8rem; line-height: 4rem; color: var(--color-dark-blue);margin-left: 1rem; margin-top: 5rem;
 			@media (min-width: 850px){margin: 3rem;  } }
 		.PageSubTitle{display: block; font-weight: 400;font-size: 1.5rem; margin:1rem; letter-spacing: 0.125rem; color: var(--color-medium-blue);
@@ -113,7 +113,7 @@ clip: rect(0,0,0,0); white-space: nowrap; border-width: 0}
 		.CustomersText svg{ fill: var(--color-dark-blue); width: 8rem;
 			@media (min-width: 850px){width: 10rem; height: auto; justify-content: space-between; };
 		}
-	.CustomersTitle{display: block; font-weight: 100; font-size: 2.4rem; line-height: 3rem; color: var(--color-dark-blue);margin-left: 1rem; margin-top: 5rem;
+	.CustomersTitle{display: block; font-weight: 100; font-size: 2.3rem; line-height: 3rem; color: var(--color-dark-blue);margin-left: 1rem; margin-top: 5rem;
 		@media (min-width: 850px){margin: 0 3rem;  } }
 	.Filters{display: flex; align-items: center; justify-content: center; 
 
@@ -152,7 +152,7 @@ clip: rect(0,0,0,0); white-space: nowrap; border-width: 0}
 							@media (min-width: 650px){margin-left: 2rem;}	
 						}
 					}
-					.SelectFilter{border-radius: 0.5rem; background: rgba(191, 204, 222, 0.1); border: 1px solid var(--color-dark-grey); height: 2rem; width: 18rem; outline: none;
+					.SelectFilter{border-radius: 0.5rem; background: rgba(191, 204, 222, 0.1); border: 1px solid var(--color-dark-grey); height: 2rem; width: 16rem; outline: none;
 						&:hover{border: 3px solid var(--color-primary-blue);}
 					}
 						.SelectFilter option{font-family: 'Archivo', sans-serif; color: var(--color-dark-blue);}
@@ -166,6 +166,7 @@ clip: rect(0,0,0,0); white-space: nowrap; border-width: 0}
 			}
 				.CustomersImage{width: 10rem; margin: 0 auto;}
 .Reviews{padding-bottom: 4rem; position: relative; display: flex; align-items: center; justify-content: center; flex-direction: column;}
+.reviewRating{display: none;}
 .Reviews .CustomersText svg{width: 10rem ; height: 10rem;}
 .Review{display: block;	 background: var(--color-primary-light);margin: 1rem; padding: 2rem 1rem; margin-bottom: 0; border-radius: 0.5rem; box-shadow: 0 0 1rem  var(--color-primary-blue);
 	@media (min-width: 600px){ margin: 4rem auto; max-width: 80%;  margin-bottom: 0; }
@@ -200,7 +201,8 @@ clip: rect(0,0,0,0); white-space: nowrap; border-width: 0}
 .Footer{background: url("./images/G00050000642.webp") center/cover repeat ;  padding-bottom: 5rem; color: var(--color-primary-blue);}
 
 .Footer{height: 12rem;}
-.FooterContact{ display: flex; align-items: center; justify-content: center; flex-direction: column; padding: 2rem 0 0  ; color: var(--color-primary-orange); text-transform: uppercase; font-size: 1.2rem; 	}
+.FooterContact{ display: flex; align-items: center; justify-content: center; flex-direction: column; padding: 2rem 0 0  ; color: var(--color-primary-orange); text-transform: uppercase; font-size: 0.8rem;
+	@media (min-width: 450px){font-size: 1.2rem;} 	}
 		.FooterItems{display: flex; align-items: center; justify-content: center; list-style-type: none; padding-left: 0;
 		}	
 			.FooterItem{ margin-left: 1rem;}
